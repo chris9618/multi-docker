@@ -1,0 +1,18 @@
+### PUll the Base Image
+FROM node:alpine
+
+###WORKDIR
+
+WORKDIR '/app'
+
+##COPY PACKAGES.JSON
+
+COPY ./package.json ./
+
+##RUN NPM BUILD
+
+RUN npm install
+
+COPY . .  
+
+CMD ["npm", "run", "start"]
