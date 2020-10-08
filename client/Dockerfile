@@ -1,4 +1,4 @@
-FROM node:alpine as builder
+FROM node:alpine
 
 WORKDIR '/app'
 
@@ -13,5 +13,5 @@ RUN npm run build
 
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=1 /app/build /usr/share/nginx/html
 
