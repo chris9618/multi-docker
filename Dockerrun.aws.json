@@ -24,7 +24,7 @@
         },
         {
             "name" : "nginx",
-            "image" : "chrisjerry9618/nginx",
+            "image" : "chrisjerry9618/multi-nginx",
             "hostname" : "nginx",
             "essential" : true,
             "PortMappings" : [
